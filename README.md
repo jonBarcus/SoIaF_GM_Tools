@@ -1,17 +1,8 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
+* Ruby 2.2.1p85
+* Rails 4.2.0
+* Database - PostgreSQL 9.4.1
 
 * Database initialization
 
