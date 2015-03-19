@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe House do
-  let(:house) {House.new({name: "Testees",
+  Region.create!({name: "Dorne"})
+  let(:house) {House.create!({name: "Testees",
                           region_id:  1,
                           history:    "This is a great house.",
                           user_id:    17})
@@ -11,6 +12,9 @@ RSpec.describe House do
   end
   it "has a region_id of 1" do
     expect(house.region_id).to eq(1)
+  end
+  it "has a region name of 'The North'" do
+    expect(house.region.name).to eq("Dorne")
   end
   it "has a history that includes 'great'" do
     expect(house.history).to include(*"great")
