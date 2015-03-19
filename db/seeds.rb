@@ -8,11 +8,11 @@
 
 Region.delete_all
 
-the_north = Region.create({name:       "The North"})
-the_vale = Region.create({name:        "The Vale"})
-the_riverlands = Region.create({name:  "The Riverlands"})
-the_crownlands = Region.create({name:  "The Crownlands" })
-the_reach = Region.create({name:       "The Reach"})
-the_stormlands = Region.create({name:  "The Stormlands"})
-dorne = Region.create({name:           "Dorne"})
-the_seven_kingdoms.create({name:       "The Seven Kingdoms"})
+the_north = Region.create({name:          "The North"})
+the_vale = Region.create({name:           "The Vale"})
+the_riverlands = Region.create({name:     "The Riverlands"})
+the_crownlands = Region.create({name:     "The Crownlands" })
+the_reach = Region.create({name:          "The Reach"})
+the_stormlands = Region.create({name:     "The Stormlands"})
+dorne = Region.create({name:              "Dorne"})
+the_seven_kingdoms = Region.create({name: "The Seven Kingdoms"})
