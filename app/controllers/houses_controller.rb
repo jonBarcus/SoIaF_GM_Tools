@@ -1,6 +1,7 @@
 class HousesController < ApplicationController
 
   def index
+    # FIXME Correct so it lists houses in order of creation, not when they were updated
     @houses = current_user.houses
   end
 
@@ -24,6 +25,22 @@ class HousesController < ApplicationController
   end
 
   # TODO Create method to EDIT houses
+  def edit
+    @regions = Region.all
+    @house = House.find_by({id: params["id"]})
+  end
+
+  def update
+    @house = House.find_by({id: params["id"]})
+
+    @house.update(house_params)
+
+    if @house.save
+      redirect_to("/houses/#{@house.id}")
+    else
+      render(:edit)
+    end
+  end
   # TODO Create method to DELETE houses
 
   private
