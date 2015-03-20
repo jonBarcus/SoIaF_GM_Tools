@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   # It also provides the password digest in the database
   has_secure_password
 
-
+  has_many :houses
 end

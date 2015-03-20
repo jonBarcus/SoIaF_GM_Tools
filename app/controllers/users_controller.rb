@@ -32,3 +32,5 @@ class UsersController < ApplicationController
 
 
 end
+
+# OPTIMIZE Check to see if there's anything we can do here

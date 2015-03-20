@@ -21,3 +21,5 @@ class SessionController < ApplicationController
   end
 
 end
+
+# OPTIMIZE Check to see if there's anything to do here

@@ -1,5 +1,9 @@
 class HousesController < ApplicationController
 
+  def index
+    @houses = current_user.houses
+  end
+
   def new
     @regions = Region.all
     @house = House.new
@@ -14,6 +18,13 @@ class HousesController < ApplicationController
       render(:new)
     end
   end
+
+  def show
+    @house = House.find_by({id: params["id"]})
+  end
+
+  # TODO Create method to EDIT houses
+  # TODO Create method to DELETE houses
 
   private
 
