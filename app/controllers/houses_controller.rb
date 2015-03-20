@@ -24,7 +24,6 @@ class HousesController < ApplicationController
     @house = House.find_by({id: params["id"]})
   end
 
-  # TODO Create method to EDIT houses
   def edit
     @regions = Region.all
     @house = House.find_by({id: params["id"]})
@@ -41,7 +40,12 @@ class HousesController < ApplicationController
       render(:edit)
     end
   end
-  # TODO Create method to DELETE houses
+
+  def destroy
+    house = House.find_by({id: params[:id]})
+    house.delete
+    redirect_to("/houses")
+  end
 
   private
 

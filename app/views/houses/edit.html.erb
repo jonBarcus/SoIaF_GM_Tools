@@ -9,3 +9,8 @@
   <%= f.text_area(:history, size: "60x12") %>
   <%= f.submit %>
 <% end %>
+<%= form_for(@house, {:method => :delete}) do |f| %>
+<%= f.submit "Delete House" %>
+<% end %>
+
+<a href="/houses/<%="#{@house.id}"%>">Go Back</a>
