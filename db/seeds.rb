@@ -23,39 +23,55 @@ youth = Age.create({name:                 "Youth",
                     age_min:               0,
                     age_max:               9,
                     ability_xp:            120,
-                    specialty_xp:          40})
+                    specialty_xp:          40,
+                    destiny_points:        7,
+                    max_benefits:          3 })
 adolescent = Age.create({name:            "Adolescent",
                          age_min:          10,
                          age_max:          13,
                          ability_xp:       150,
-                         specialty_xp:     40})
+                         specialty_xp:     40,
+                         destiny_points:   6,
+                         max_benefits:     3  })
 young_adult = Age.create({name:           "Young Adult",
                           age_min:         14,
                           age_max:         17,
                           ability_xp:      180,
-                          specialty_xp:    60})
+                          specialty_xp:    60,
+                          destiny_points:  5,
+                          max_benefits:    3  })
 adult = Age.create({name:                 "Adult",
                     age_min:               18,
                     age_max:               29,
                     ability_xp:            210,
-                    specialty_xp:          80})
+                    specialty_xp:          80,
+                    destiny_points:        4,
+                    max_benefits:          3  })
 middle_aged = Age.create({name:           "Middle Aged",
                           age_min:         30,
                           age_max:         49,
                           ability_xp:      240,
-                          specialty_xp:    100})
+                          specialty_xp:    100,
+                          destiny_points:  3,
+                          max_benefits:    3 })
 old = Age.create({name:                   "Old",
                   age_min:                 50,
                   age_max:                 69,
                   ability_xp:              270,
-                  specialty_xp:            160})
+                  specialty_xp:            160,
+                  destiny_points:          2,
+                  max_benefits:            2})
 very_old = Age.create({name:              "Very Old",
                        age_min:            70,
                        age_max:            79,
                        ability_xp:         330,
-                       specialty_xp:       200})
+                       specialty_xp:       200,
+                       destiny_points:     1,
+                       max_benefits:       1})
 venerable = Age.create({name:             "Venerable",
                         age_min:           80,
                         age_max:           200,
                         ability_xp:        360,
-                        specialty_xp:      240})
+                        specialty_xp:      240,
+                        destiny_points:    0,
+                        max_benefits:      0})
