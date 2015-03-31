@@ -1,0 +1,7 @@
+<h1>Character <%= @character.name %></h1>
+<h2>of <%= @character.house.name %></h2>
+<h3>Character History:</h3>
+<p><%= @character.history %></p>
+
+<a href="/characters/<%="#{@character.id}"%>/edit">Edit</a>
+<a href="/characters/">Go Back</a>

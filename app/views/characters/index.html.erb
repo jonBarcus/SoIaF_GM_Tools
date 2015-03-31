@@ -1,1 +1,9 @@
 <h1>Your Characters</h1>
+
+<% @characters.each do |character| %>
+<li>
+  <%= link_to(character.name, action: :show, id: character.id) %>
+</li>
+<% end %>
+
+<a href="/">Go Back</a>
