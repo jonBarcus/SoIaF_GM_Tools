@@ -8,6 +8,7 @@
 
 Region.delete_all
 Age.delete_all
+Gender.delete_all
 
 the_north = Region.create({name:          "The North"})
 the_vale = Region.create({name:           "The Vale"})
@@ -75,3 +76,5 @@ venerable = Age.create({name:             "Venerable",
                         specialty_xp:      240,
                         destiny_points:    0,
                         max_benefits:      0})
+male_gender = Gender.create({name:         "Male"})
+female_gender = Gender.create({name:       "Female"})
