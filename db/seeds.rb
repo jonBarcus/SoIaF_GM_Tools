@@ -9,6 +9,7 @@
 Region.delete_all
 Age.delete_all
 Gender.delete_all
+House.delete_all
 
 the_north = Region.create({name:          "The North"})
 the_vale = Region.create({name:           "The Vale"})
