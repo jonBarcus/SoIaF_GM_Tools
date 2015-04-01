@@ -20,6 +20,12 @@ the_stormlands = Region.create({name:     "The Stormlands"})
 dorne = Region.create({name:              "Dorne"})
 the_seven_kingdoms = Region.create({name: "The Seven Kingdoms"})
 
+#OPTIMIZE Figure out way to remove test house for testing
+test_house = House.create({id:                     1,
+                          name:                   "Testee",
+                          region_id:              1,
+                          history:                "Founded by...Bob"})
+
 youth = Age.create({name:                 "Youth",
                     age_min:               0,
                     age_max:               9,
