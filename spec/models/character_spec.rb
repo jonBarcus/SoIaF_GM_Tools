@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+#TODO As we add in the Abilities and Specialties add tests
+
 RSpec.describe Character do
   let(:new_character) {Character.new({name:       "Test",
                                       surname:    "Character",

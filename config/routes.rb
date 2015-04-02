@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :houses
+  resources :characters
 
   # Example resource route with options:
   #   resources :products do
