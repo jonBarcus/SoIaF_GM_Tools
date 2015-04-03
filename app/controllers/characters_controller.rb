@@ -3,6 +3,7 @@ class CharactersController < ApplicationController
   def new
     @houses = current_user.houses
     @ages = Age.all
+    @genders = Gender.all
     @character = Character.new
   end
 

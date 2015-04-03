@@ -5,6 +5,8 @@
   <%= f.text_field(:name) %>
   <%= f.label(:surname) %>
   <%= f.text_field(:surname) %>
+  <%= f.label(:gender_id) %>
+  <%= f.collection_select(:gender_id, @genders, :id, :name) %>
   <%= f.label(:age_id) %>
   <%= f.collection_select(:age_id, @ages, :id, :name) %>
   <%= f.label(:house_id) %>

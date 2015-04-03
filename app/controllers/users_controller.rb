@@ -16,6 +16,8 @@ class UsersController < ApplicationController
     end
   end
 
+  #TODO Allow changes to account information
+  #TODO Allow a user to delete his/her account
 
   private
 
