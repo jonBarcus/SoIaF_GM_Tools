@@ -1,5 +1,10 @@
 class CharactersController < ApplicationController
 
+  def index
+    @characters = Character.find_by({user_id: current_user.id})
+  end
+
+
   def new
     @houses = current_user.houses
     @ages = Age.all
