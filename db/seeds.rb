@@ -155,4 +155,83 @@ fighting = AbilityName.create({name:              "Fighting",
                                                    effectively in combat.  Whenever you would attack unarmed or use a
                                                    hand-held weapon, you test Fighting."})
 healing = AbilityName.create({name:               "Healing",
-                              description:        ""})
+                              description:        "Life in the Seven Kingdoms is perilous, and those who venture beyond
+                                                   the relative safety of their walls are at risk of attack from bandits
+                                                   and mountain men, wildlings, rogue knights, and even from predatory
+                                                   animals.  With such encounters come injuries, and while many may recover
+                                                   on their own, injuries left untended may fester, and death can result
+                                                   even from a minor cut.  Healing, then, represents a skill with and
+                                                   understanding of the accumulated medical knowledge throughout the
+                                                   world.  Rank in this availability reflects an understanding of health
+                                                   and recovery, with the highest ranks representing talents held only by
+                                                   the greatest of maesters."})
+knowledge = AbilityName.create({name:             "Knowledge",
+                                description:      "Knowledge describes your general understanding and awareness of the
+                                                   world in which you live.  It represents a broad spectrum of subjects,
+                                                   ranging from history, agriculture, economics, politics, and numerous
+                                                   other subjects--but only in the braodest possible ways.  For specialized
+                                                   forms of knowledge, you must invest Destiny Points to acquire the
+                                                   Knowledge Focus benefit."})
+language = AbilityName.create({name:              "Language",
+                               description:       "Language is the ability to communicate in a tongue, usually through speech,
+                                                   but among the best educated, also through the written word.  The
+                                                   starting rank in this ability applies to your knowledge of the Common
+                                                   Tongue spoken throughout Westeros.  You start with rank 0 in all other
+                                                   languages.  When you improve this ability, you may improve your ability
+                                                   with the Common Tongue or select another language."})
+marksmanship = AbilityName.create({name:          "Marksmanship",
+                                   description:   "Marksmanship represents your skill with ranged weapons--most notably
+                                                   bows and crossbows, but also slings, thrown weapons, and even larger
+                                                   siege weapons.  It is the ability to use them appropriately and accurately
+                                                   in combat.  Whenever you make an attack using a ranged weapon, you test
+                                                   Marksmanship, likewise when you are target shooting or simply showing off
+                                                   your skill."})
+persuasion = AbilityName.create({name:            "Persuasion",
+                                 description:     "Persuasion is the ability to manipulate the emotions and beliefs of others.
+                                                   With this ability, you can molify how others see you, shape their attitude
+                                                   towards others, convince them of things they might not otherwise agree to,
+                                                   and more.  While a potent ability--and one vital to those who play the game
+                                                   of thrones--limits do exist, and those who have no interest in intrigue or
+                                                    conversation can't be forced to endure your efforts of manipulation.  But
+                                                    for those who want something from you or who are amenable to you, Persuasion
+                                                      can be a powerful tool."})
+status = AbilityName.create({name:                "Status",
+                             description:         "Of all of the abilities, Status is one of the more unusual in that it isn't
+                                                   determined through normal means during character creation.  Instead, your
+                                                   position inside your noble house determines your Status.  In a way, it is a much
+                                                   a part of you as Athletics, Endurance, and Persuasion are, for you have little
+                                                   control over where and to whom you were born.  If by a stroke of poor luck you
+                                                   were born to a family of smallfolk leech farmers, odds are that you'll never be
+                                                   able to raise yourself to a higher Status.  Similarly, if born to a great
+                                                   house, your family may be scattered and destroyed and you exiled; your condition
+                                                   and circumstances can never change who you are in the eyes of your peers--even
+                                                   though shame and disgrace can significantly affect how well you can exert your Status.
+                                                   Functionally, Status describes the circumstances of your birth and the knowledge
+                                                   and influence those circumstances grant you.  The higher your rank, the more likely
+                                                   you will be able to recognize heraldry, the better your reputation, and the stronger
+                                                   your knowledge of managing people and lands."})
+stealth = AbilityName.create({name:               "Stealth",
+                              description:        "Stealth represents your ability to creep about unseen and unheard when you want
+                                                   or need to.  Whenever you would move without being noticed, you test Stealth."})
+survival = AbilityName.create({name:              "Survival",
+                               description:       "Survival is the ability to get by in the wild, to hunt, to forage, to avoid getting
+                                                   lost, and to follow tracks.  The Survival skill is important for a variety of people in
+                                                   that hunting remains an important method of providing food for one's family, especially
+                                                   in the more remote corners of Westeros.  As well, hunting and hawking are common
+                                                   pastimes for the nobility of the Seven Kingdoms, and lacking the ability to hunt
+                                                   calls into question an individual's courage and manliness."})
+thievery = AbilityName.create({name:              "Thievery",
+                               description:       "Thievery is a catchall ability for any skill or talent that involves larcenous
+                                                   activities.  Examples include picking locks, hand tricks, and general robbery."})
+warfare = AbilityName.create({name:               "Warfare",
+                              description:        "Warfare describes a character's talents at managing a battlefield, covering
+                                                   the ability to issue commands, strategic knowledge for maneuvering armies and tactics
+                                                   for dealing with small engagements.  Warfare is used extensively in combat and warfare
+                                                    but may also be used outside of combat to look for areas of opportunities for strategic
+                                                    or tactical advantage"})
+will = AbilityName.create({name:                  "Will",
+                           description:           "Will is your mental fortitude, and it reflects the state of your mind's health
+                                                   and endurance.  It represents your ability to withstand fear in the face of
+                                                   appalling violence or supernatural phenomena, and it serves as the foundation
+                                                   for your ability to resist being manipulated by others."})
+
