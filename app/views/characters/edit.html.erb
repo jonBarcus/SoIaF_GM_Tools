@@ -1,0 +1,20 @@
+<h1>Edit Character <%= @character.name %> <%= @character.surname %></h1>
+
+<%= form_for(@character) do |f| %>
+  <%= f.label(:house_id) %>
+  <%= f.collection_select(:house_id, @houses, :id, :name) %>
+  <%= f.label(:name) %>
+  <%= f.text_field(:name) %>
+  <%= f.label(:surname) %>
+  <%= f.text_field(:surname) %>
+  <%= f.label(:description) %>
+  <%= f.text_area(:description, size: "60x12") %>
+  <%= f.label(:history) %>
+  <%= f.text_area(:history, size: "60x12") %>
+  <%= f.submit %>
+<% end %>
+<%= form_for(@character, {:method => :delete}) do |f| %>
+<%= f.submit "Delete Character" %>
+<% end %>
+
+<a href="/characters/<%="#{@character.id}"%>">Go Back</a>
