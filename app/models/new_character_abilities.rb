@@ -8,5 +8,4 @@ module NewCharacterAbilities(id)
   ability_names = AbilityNames.all
 
 
-
 end
