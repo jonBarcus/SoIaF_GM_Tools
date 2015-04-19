@@ -3,9 +3,16 @@
 # default value of 2, regardless of any of the other
 # character attributes (i.e. age, gender, etc.)
 
-module NewCharacterAbilities(id)
+module NewCharacterAbilities
 
-  ability_names = AbilityNames.all
+  def self.new(id)
 
+    ability_names = AbilityName.all
+
+    ability_names.each do |a|
+      Ability.create(character_id: id,
+                     ability_name_id: a.id)
+    end
+  end
 
 end

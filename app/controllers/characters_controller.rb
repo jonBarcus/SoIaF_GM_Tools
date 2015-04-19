@@ -16,6 +16,7 @@ class CharactersController < ApplicationController
     @character = Character.new(character_params)
 
     if @character.save
+      NewCharacterAbilities.new(@character.id)
       redirect_to("/")
     else
       render("/characters/new")
