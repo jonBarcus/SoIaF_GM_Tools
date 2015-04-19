@@ -1,6 +1,7 @@
 class SessionController < ApplicationController
 
   def new
+    @failed_auth = false
   end
 
   def create
@@ -11,6 +12,7 @@ class SessionController < ApplicationController
       session[:user_id] = user.id
       redirect_to("/")
     else
+      @failed_auth = true
       render(:new)
     end
   end

@@ -1,3 +1,7 @@
+<% if @failed_auth %>
+  <h2>Invalid user name or password!!</h2>
+<% end %>
+
 <%= form_tag("/session", method: "post") do %>
   <%= label_tag(:email) %>
   <%= text_field_tag(:email) %>
