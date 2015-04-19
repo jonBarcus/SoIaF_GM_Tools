@@ -27,6 +27,31 @@ class CharactersController < ApplicationController
     @character = Character.find_by({id: params["id"]})
   end
 
+  def edit
+    @houses = current_user.houses
+    @character = Character.find_by({id: params["id"]})
+  end
+
+  def update
+    @character = Character.find_by({id: params["id"]})
+
+    @character.update(character_params)
+
+    if @character.save
+      redirect_to("/characters/#{@character.id}")
+    else
+      #OPTIMIZE Develop style guide with Jeff and Mo
+      render :edit
+    end
+  end
+
+
+  def destroy
+    character = Character.find_by({id: params["id"]})
+    character.delete
+    redirect_to("/characters")
+  end
+
   private
 
   def character_params
