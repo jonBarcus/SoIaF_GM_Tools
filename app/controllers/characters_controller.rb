@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
 
   def index
-    @characters = Character.find_by({user_id: current_user.id})
+    @characters = current_user.characters
   end
 
 

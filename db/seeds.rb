@@ -23,7 +23,7 @@ dorne = Region.create({name:              "Dorne"})
 the_seven_kingdoms = Region.create({name: "The Seven Kingdoms"})
 
 #OPTIMIZE Figure out way to remove test house for testing
-test_house = House.create({id:                     1,
+test_house = House.create({
                           name:                   "Testee",
                           region_id:              1,
                           history:                "Founded by...Bob"})
