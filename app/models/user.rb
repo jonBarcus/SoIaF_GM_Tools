@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
 
+  validates :email, uniqueness: true
+
+  #TODO Add more email validations (ie @, etc.)
+
   # this is for bcrypt (makes use of password/password confirmation)
   # It also provides the password digest in the database
   has_secure_password

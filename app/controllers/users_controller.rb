@@ -5,8 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    #TODO Have application check against existing accounts by e-mail address.
-    # This is to make sure there isn't user duplication which can cause issues.
 
     @user = User.new(user_params)
 
