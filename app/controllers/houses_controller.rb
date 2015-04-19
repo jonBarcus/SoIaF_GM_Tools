@@ -43,7 +43,11 @@ class HousesController < ApplicationController
 
   def destroy
     house = House.find_by({id: params[:id]})
-    house.delete
+    delete_it = HouseMaintenance.PrepareForHouseDeletion(house)
+    if delete_it
+      house.delete
+    end
+
     redirect_to("/houses")
   end
 
