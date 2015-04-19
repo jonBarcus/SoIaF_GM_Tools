@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      binding.pry
       House.create({region_id: 9, name: "No House",
                     history: "This house was created for you upon account creation.",
                     user_id: @user.id})
