@@ -1,8 +1,7 @@
 class HousesController < ApplicationController
 
   def index
-    # FIXME Correct so it lists houses in order of creation, not when they were updated
-    @houses = current_user.houses
+    @houses = current_user.houses.order(:created_at)
   end
 
   def new
