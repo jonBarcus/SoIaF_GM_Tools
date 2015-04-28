@@ -25,7 +25,8 @@ module CharacterMaintenance
 
     ability_names.each do |a|
       Ability.create(character_id: id,
-                     ability_name_id: a.id)
+                     ability_name_id: a.id,
+                     rank: 2)
     end
   end
 
