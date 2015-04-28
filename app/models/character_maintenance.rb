@@ -19,10 +19,11 @@
 
 module CharacterMaintenance
 
-  def self.NewCharacterAbilities(id)
+  def self.newCharacterAbilities(id)
 
     ability_names = AbilityName.all
 
+    # Rank is set to 2 git st
     ability_names.each do |a|
       Ability.create(character_id: id,
                      ability_name_id: a.id,
