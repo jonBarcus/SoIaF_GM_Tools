@@ -20,7 +20,6 @@ RSpec.describe Character do
   end
 
   it "Character has a house name of 'Testee'" do
-    binding.pry
     expect(new_character.house.name).to eq("Testee")
   end
 
