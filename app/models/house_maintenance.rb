@@ -24,7 +24,7 @@ module HouseMaintenance
       return false
     else
       no_house = House.find_by(name: DEFAULT_HOUSE_NAME, user_id: house_to_delete.user_id)
-      if (house_to_delete.id == no_house.id) || (no_house == nil)
+      if (no_house == nil) || (house_to_delete.id == no_house.id)
         return false
       end
 
