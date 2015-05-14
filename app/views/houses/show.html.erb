@@ -1,7 +1,11 @@
 <h1>House <%= @house.name %></h1>
+<% if @house.region %>
 <h2>of <%= @house.region.name %></h2>
+<% end %>
 <h3>House History:</h3>
 <p><%= @house.history %></p>
 
+<% if @default != true %>
 <a href="/houses/<%="#{@house.id}"%>/edit">Edit</a>
+<% end %>
 <a href="/houses/">Go Back</a>

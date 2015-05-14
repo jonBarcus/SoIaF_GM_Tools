@@ -5,6 +5,26 @@ module HouseMaintenance
     return DEFAULT_HOUSE_NAME
   end
 
+  # Checks if the given house is the default house
+  #
+  # params:
+  #   house - The House to delete (as a string or House)
+  # returns true if house is the default House
+  def self.IsDefaultHouse(house)
+    house_name = nil
+
+    if house.class == String
+      house_name = house
+    elsif house.class == House
+      house_name = house.name
+    elsif house.class == House.id
+      the_house = House.find_by({id: house})
+      house_name = the_house.name
+    end
+
+    return house_name != nil && house_name == DEFAULT_HOUSE_NAME
+  end
+
   # Moves all characters from the house being
   # deleted to the default house.
   #

@@ -1,16 +1,25 @@
 <h1>Edit House <%= @house.name %></h1>
 
+<% if flash[:alert] %>
+  <h2><%= flash[:alert] %></h2>
+<% end %>
 <%= form_for(@house) do |f| %>
   <%= f.label(:region_id) %>
   <%= f.collection_select(:region_id, @regions, :id, :name) %>
   <%= f.label(:name) %>
-  <%= f.text_field(:name) %>
+  <% if !@default %>
+    <%= f.text_field(:name) %>
+  <% else %>
+    <%= f.text_field(:name, :readonly => true) %>
+  <% end %>
   <%= f.label(:history) %>
   <%= f.text_area(:history, size: "60x12") %>
   <%= f.submit %>
 <% end %>
-<%= form_for(@house, {:method => :delete}) do |f| %>
-<%= f.submit "Delete House" %>
+<% if !@default %>
+  <%= form_for(@house, {:method => :delete}) do |f| %>
+  <%= f.submit "Delete House" %>
+  <% end %>
 <% end %>
 
 <a href="/houses/<%="#{@house.id}"%>">Go Back</a>
