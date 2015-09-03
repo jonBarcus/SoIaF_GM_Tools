@@ -8,5 +8,11 @@
 <h3>Character History:</h3>
 <p><%= @character.history %></p>
 
+<h3>Character Abilities</h3>
+<p><% @character.abilities.each do |ability| %>
+    <li><%= ability.ability_name.name %> <%= ability.rank %></li>
+    <% end %>
+</p>
+
 <a href="/characters/<%="#{@character.id}"%>/edit">Edit</a>
 <a href="/characters/">Go Back</a>
