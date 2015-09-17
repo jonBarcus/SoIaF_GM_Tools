@@ -48,5 +48,7 @@ group :development, :test do
   gem 'annotate'
   gem 'capybara'
   gem 'database_cleaner'
+
+  gem 'railroady'
 end
 
