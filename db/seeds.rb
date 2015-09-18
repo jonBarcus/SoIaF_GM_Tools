@@ -236,3 +236,126 @@ will = AbilityName.create({name:                  "Will",
                                                    appalling violence or supernatural phenomena, and it serves as the foundation
                                                    for your ability to resist being manipulated by others."})
 
+#AGILITY SPECIALTIES
+acrobatics = SpecialtyName.create({name:            "Acrobatics",
+                                   description:     "You may use Agility to perform flips, tumbles, somersaults, to leap to your feet
+                                                   when lying on the ground, and a variety of other acrobatic maneuvers.",
+                                   ability_name_id:  1})
+balance = SpecialtyName.create({name:               "Balance",
+                                description:        "Agility also helps you keep your balance when moving across a precarious surface,
+                                                     allowing you to move forward or backward on a narrow ledge.  The only time you need
+                                                     to test Agility to maintain your balance is when failure to do so would have consequences
+                                                      (a fall that could result in death or when you would move more quickly across
+                                                        treacherous terrain).  A failure means that you make no progress, while a Critical failure
+                                                        means you fall.",
+                                ability_name_id:    1})
+contorsions = SpecialtyName.create({name:           "Contorsions",
+                                    description:    "You may test Agility to slip through a tight space.  The Difficulty depends on the size of the
+                                                     space through which you're moving, as shown on the following chart.  A successful test allows you
+                                                     to move through the gap with no trouble, while a failure results in no progress.  A Critical failure
+                                                     indicates you become stuck and must succeed on another Agility test against the same Difficult to
+                                                     escape.",
+                                    ability_name_id: 1})
+dodge = SpecialtyName.create({name:                 "Dodge",
+                              description:          "During combat, you may use a Great Action to Dodge all attacks made against you.  The result
+                                                     of your Agility test replaces your Combat Defense until the start of your next turn, even if
+                                                     it's worse than your Combat Defense.",
+                              ability_name_id:       1})
+quickness = SpecialtyName.create({name:             "Quickness",
+                                  description:      "During combat, you test Agility to determine the order of initiative (bonus dice from Quickness
+                                                     apply).  The combatant with the highest result goes first, followed by the next highest, and so on.
+                                                     In the case of a tie, the character with the highest rank in Agility goes first.  If there's still
+                                                     a tie, compare ranks in Quickness.  Finally, should the combatants still be equal, they test again
+                                                     until there's a clear victor.  Quickness also comes in to play whenever you would test your reflexes
+                                                      or reactions, such as catching a thrown object for example.",
+                                  ability_name_id:  1})
+#ANIMAL HANDLING SPECIALTIES
+charm = SpecialtyName.create({name:                 "Charm",
+                              description:          "Those who spend a lot of time around animals become more comfortable with them.  Such individuals
+                                                     become so comfortable that they can remain calm and bear their vast experience when encountering
+                                                     wild and feral creatures.  Upon first meeting a wild animal, you may test Animal Handling to calm
+                                                     the beast.  The Difficulty is equal to the animal's passive Will result.  If you succeed, you improve
+                                                     the animal's disposition by one step per degree of success (see Chapter 8:  Intrigue for details on
+                                                      dispositions).  Generally, wild animals have the Unfriendly disposition to humans, while domesticated
+                                                     animals are Neutral.  An animal's disposition must be at least Neutral for you to handle it. (Using
+                                                     Animal Handling to ride an unfamiliar steed is an exception.)  Once you test Animal Handling, you may
+                                                     try again, provided the animal stays around long enough for another try.",
+                              ability_name_id:       2})
+drive = SpecialtyName.create({name:                 "Drive",
+                              description:          "Whenever you would control an animal-drawn vehicle such as a cart, wagon, or coach, you may test
+                                                     Animal Handling.  Provided the animal is comfortable, not injured, and not frightened, the test is
+                                                     AUTOMATIC(0).  However, if the animal becomes panicked or injured in combat, you must succeed on an
+                                                     Animal Handling test to restore your control.  The Difficulty is equal to the animal's passive Will
+                                                     result.  If you succeed, you may direct the animal as normal.  If you fail, the animal sprits away
+                                                     from the source of its fear or injury.  You may try again on following rounds.",
+                              ability_name_id:      2})
+ride = SpecialtyName.create({name:                  "Ride",
+                             description:           "Riding an animal trained to bear a rider requires an AUTOMATIC(0) Animal Handling test.  When you try
+                                                     to ride an animal that's not inclined to be ridden (Dislike or worse disposition), you must succeed on
+                                                     an Animal Handling test.  The Difficulty equals the animal's passive Will result.  A succees indicates
+                                                     you gain control for a number of rounds equal to your Animal Handling rank times your degree of success.
+                                                     Three consecutive successful tests mean you gain mastery over the animal and it will bear you.  A failed
+                                                     test means the animal doesn't move for the round.  A Critical Failure means the animal throws you off.
+                                                     You land 1d6/2 yards away and take 1 damage (ignoring AR) for each yard you traveled.
+
+                                                     When riding an animal in combat, you must spend a Lesser Action to maintain control over the animal if the
+                                                     animal is trained for war or a Greater Action if it is not trained for war.  If the animal is injured or
+                                                     frightened, you must test to control it as a Greater Action.  The Difficulty is equal to the animal's passive
+                                                     Will result.  If you succeed, you calm the animal down enough to resume normal control actions.  If you fail,
+                                                     the animal sprints away from the source of its injury or fear.  If you roll a Critical failure, you land 1d6/2 yards
+                                                     away and take 1 damage (ignoring AR) for each yard you traveled.  Alternatively, you can use the Charm function to
+                                                     improve the animal's disposition toward you as you would whenever you encounter an unfriendly animal.",
+                              ability_name_id:      2})
+train = SpecialtyName.create({name:                 "Train",
+                              description:          "You can use Animal Handling to teach animals to perform tasks, ranging from simple tricks to complex tasks, such as
+                                                     war training.  Animal instruction is an Extended Action.  You must succeed on a number of tests equal to the animal's
+                                                     Will minus its Cunning (minumum one test), with each test made once per week of training, assuming you spend a few hours
+                                                     every day with the animal.  The test Difficulty is based on the animal's Will as shown on the following chart.  Typical
+                                                     tricks and tasks include fetching, guarding, attacking, working, bearing a rider, and so on, within reason.  Training
+                                                     an animal for war is a bit more invovled and requires an extra week to instill the proper discipline.",
+                              ability_name_id:      2})
+#ATHLETICS SPECIALTIES
+climb = SpecialtyName.create({name:                 "Climb",
+                              description:          "Whenever you would ascend or descend a surface, you test Athletics.  A successful test allows you to climb 1 yard up or
+                                                     down per degree of success, up to your normal Movement.  The Difficulty of the test depends on the quality of the surface.
+                                                     A failed test indicates that you make no progress, while more than one degree of failure means you lose your hold and fall
+                                                     from the height you've attained.",
+                              ability_name_id:      3})
+jump = SpecialtyName.create({name:                  "Jump",
+                             description:           "You test Athletics whenever you would leap up or over an obstacle such as a fence or pit.  The Difficulty depends
+                                                     on the type of Jump attempted.  There are three basic Jumps -- running jumps, standing jumps, and high jumps.  To make a running
+                                                     jump,  you must move at least 3 yards; otherwise, it is a standing jump.  Should you need to know, when performing a standing or
+                                                     running jump, your vertical height is equal to half the distance jumped.",
+                             ability_name_id:        3})
+run = SpecialtyName.create({name:                   "Run",
+                            description:            "Most times, you don't need to test Athletics to Run.  You simply move at your sprint speed.  However, two uses require tests.
+                                                     Whenever you would cover any great distance, you must succeed on a CHALLENGING(9) Athletics test.  If you succeed on the test,
+                                                     you may Run for an hour per degree.  At the end of this time, you must test again, but the Difficulty increases by one step to
+                                                     FORMIDABLE(12).  If at any time you fail, you gain one point of Fatigue(see page 175).  If you're not using the fatigue rules, a
+                                                     failed test simply means you must stop and cannot Run again until you rest for four hours.  The other major use of Run is to increase
+                                                     your speed.  In combat, whenever you take the Sprint action, you can attempt a FORMIDABLE(12) Athletics test to run faster and, thus,
+                                                     cover more ground.  A success allows you to sprint 1 extra yard per degree.",
+                            ability_name_id:        3})
+strength = SpecialtyName.create({name:              "Strength",
+                                 description:       "You use Athletics to lift or push through heavy objects.  Anytime you would life something the Narrator deems heavy, test Athletics.
+                                                     For benchmark difficulties, see the following chart.  Note that these are starting points for lifting the weight once.  The Narrator may
+                                                     modify the Difficulty based on an object's size and Bulk.  It also gets harder to lift the same weight repeatedly and, thus, the Difficulty
+                                                     increases as well.",
+                                 ability_name_id:   3})
+swim = SpecialtyName.create({name:                  "Swim",
+                             description:           "You can only swim if you have at least a 1B in Swim.  Without it, you can keep your head above water, provided the conditions are ideal--
+                                                     calm waters, no or light wind, relatively shallow water, and so on.  Otherwise, you sink and possibly drown.  If you have the Swim specialty,
+                                                     you need not make Athletics tests unless you are in severe conditions, such as trying to ford a swollen river or keep your head above water
+                                                     in a storm-tossed sea.  The test Difficulty depends on the conditions of the water, factoring in such things as depth, undertow, current, wind,
+                                                     and so on.  The Narrator sets the Difficulty based on all of these issues but can use the following as benchmarks.  A successful test allows you
+                                                     to move at half your Movement plus 1 more yard for each degree of success after the first.  A failed Athletics test indicates no progress.
+                                                     A second failed test means you slip beneath the water's surface.  On the next round, you must pass another Athletics test to break the surface.
+                                                     Each round spent under the surface requires another successful test to get back to the air.  So if you fail three consecutive tests, you need three
+                                                     consecutive successful tests to get back to the surface.",
+                              ability_name_id:       3})
+tthrow = SpecialtyName.create({name:                "Throw",
+                               description:         "You may also test Athletics to hurl objects.  For items made for throwing, such as some axes, spears, knives, and the like, use Marksmanship
+                                                     instead.  For all other items, use Athletics.  The Difficulty and distance thrown depends on the object's weight and the degree of success.  A
+                                                     failed test means the object lands 1d6 yards away from the intended direction, while more than one degree of failure means the object lands at your
+                                                     feet.  If the item is bulky, you take -1D per Bulk point.",
+                              ability_name_id:      3})
