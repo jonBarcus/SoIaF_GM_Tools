@@ -359,3 +359,18 @@ tthrow = SpecialtyName.create({name:                "Throw",
                                                      failed test means the object lands 1d6 yards away from the intended direction, while more than one degree of failure means the object lands at your
                                                      feet.  If the item is bulky, you take -1D per Bulk point.",
                               ability_name_id:      3})
+#AWARENESS SPECIALTIES
+empathy = SpecialtyName.create({name:               "Empathy",
+                                description:        "You may use Awareness to look into the hearts of others and perceive the truthfulness of what they say and whether or not they seem genuine.  make
+                                                     an Awareness test against your target's passive Deception result, with a success revealing the target's general disposition toward you or the topic of
+                                                     your conversation.  Attaining additional degrees reveal a greater sense about the target's motivations, attitudes and so on.  This use of Awareness
+                                                     doesn't provide mind-reading; it merely lets you get an instinctual hunch about a target's motives based on his manner, expressions, and the tone of his voice.",
+                                ability_name_id:    4})
+notice = SpecialtyName.create({name:                "Notice",
+                               description:         "Awareness is most often used to employ your senses, to perceive the world around you and see the small details.  Unless you're actively searching or looking
+                                                     around, you don't test Awareness.  Instead, anyone who tries to hide from you or conceal something from you must beat your passive Awareness result.  On a
+                                                     failed test, you become aware of the effort to hide automatically.  If, however, you are actively searching for something or someone, you must equal or beat
+                                                     the opponent's Stealth test or the Difficulty set by the Narrator to find the hidden item.  Most Awareness test difficulties made to locate hidden objects,
+                                                     levers, and doors are FORMIDABLE(12), though well-hidden objects may be harder to find.",
+                               ability_name_id:     4})
+
