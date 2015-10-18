@@ -1,5 +1,5 @@
 class AddExperienceToCharacters < ActiveRecord::Migration
   def change
-    add_column  :characters, :available_experience, :integer
+    add_column  :characters, :experience, :integer
   end
 end
