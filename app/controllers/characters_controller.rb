@@ -26,11 +26,26 @@ class CharactersController < ApplicationController
 
   def show
     @character = Character.find_by({id: params["id"]})
+    @new_character = @character.created_at == @character.updated_at
+    if @new_character
+      binding.pry
+      @ability_xp = @character.age.ability_xp
+      @specialty_xp = @character.age.specialty_xp
+    else
+      @experience = @character.experience
+    end
   end
 
   def edit
     @houses = current_user.houses
     @character = Character.find_by({id: params["id"]})
+    @new_character = @character.created_at == @character.updated_at
+    if @new_character
+      @ability_xp = @character.age.ability_xp
+      @specialty_xp = @character.age.specialty_xp
+    else
+      @experience = @character.experience
+    end
   end
 
   def update

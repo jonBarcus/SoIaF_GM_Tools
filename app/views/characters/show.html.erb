@@ -8,6 +8,15 @@
 <h3>Character History:</h3>
 <p><%= @character.history %></p>
 
+
+<h3>Character Experience</h3>
+<% if @new_character %>
+<% binding.pry %>
+<p>Ability XP:  <%= @ability_xp %> <br>
+  Specialty XP:  <%= @specialty_xp %> <br> </p>
+  <% else %>
+  <p>XP Available:  <%= @experience %></p>
+  <% end %>
 <h3>Character Abilities</h3>
 <p><% @character.abilities.each do |ability| %>
     <li><%= ability.ability_name.name %> <%= ability.rank %></li>
