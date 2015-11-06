@@ -31,5 +31,4 @@ module CharacterMaintenance
     end
   end
 
-
 end

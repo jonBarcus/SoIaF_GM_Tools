@@ -28,12 +28,12 @@ class CharactersController < ApplicationController
     @character = Character.find_by({id: params["id"]})
     @new_character = @character.created_at == @character.updated_at
     if @new_character
-      binding.pry
       @ability_xp = @character.age.ability_xp
       @specialty_xp = @character.age.specialty_xp
     else
       @experience = @character.experience
     end
+
   end
 
   def edit
@@ -46,12 +46,13 @@ class CharactersController < ApplicationController
     else
       @experience = @character.experience
     end
+    @character_abilities = @character.abilities
   end
 
   def update
     @character = Character.find_by({id: params["id"]})
 
-    @character.update(character_params)
+    @character.update(edited_character_params)
 
     if @character.save
       redirect_to("/characters/#{@character.id}")
@@ -81,9 +82,21 @@ class CharactersController < ApplicationController
       :history,
       :user_id
       )
-
-
   end
 
+  def edited_character_params
+    params.require(:character).permit(
+      :name,
+      :surname,
+      :age_id,
+      :gender_id,
+      :house_id,
+      :description,
+      :history,
+      :user_id,
+      abilities_attributes: [:id, :rank]
+      # abilities_attributes: [:character_id, :ability_name_id, :rank]
+      )
+  end
 
 end

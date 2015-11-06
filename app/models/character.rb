@@ -8,4 +8,7 @@ class Character < ActiveRecord::Base
   has_many      :abilities
   has_many      :ability_names, through: :abilities
 
+  accepts_nested_attributes_for :abilities
+  # accepts_nested_attributes_for :ability_names
+
 end
