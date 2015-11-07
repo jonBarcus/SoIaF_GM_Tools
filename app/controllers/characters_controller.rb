@@ -33,6 +33,7 @@ class CharactersController < ApplicationController
     else
       @experience = @character.experience
     end
+    #FIXME even after editing a character, the SHOW is displaying seperate experiences for ability and specialty.
 
   end
 
