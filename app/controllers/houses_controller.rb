@@ -10,7 +10,13 @@ class HousesController < ApplicationController
   end
 
   def create
+    @regions = Region.all
     @house = House.new(house_params)
+
+    if @house.name == HouseMaintenance.DefaultHouseName()
+      render(:new)
+      return
+    end
 
     if @house.save
       redirect_to("/")
@@ -21,15 +27,38 @@ class HousesController < ApplicationController
 
   def show
     @house = House.find_by({id: params["id"]})
+    @default = HouseMaintenance.IsDefaultHouse(@house)
   end
 
   def edit
     @regions = Region.all
     @house = House.find_by({id: params["id"]})
+    @default = HouseMaintenance.IsDefaultHouse(@house)
   end
 
   def update
+    @regions = Region.all
     @house = House.find_by({id: params["id"]})
+
+    if HouseMaintenance.IsDefaultHouse(@house)
+      # Don't allow updating of the default house.
+      # This should be prevented by the edit method,
+      # and this check is just here for extra protection.
+      # TODO: Error message when failing
+      # TODO: Allow updating the history of the default house?
+      flash.now[:alert] = "Not allowed to edit No House"
+      @default = true
+      render(:edit)
+      return
+    else
+      @default = false
+    end
+
+    # Don't allow the house to be updated to the default house name
+    if HouseMaintenance.IsDefaultHouse(params[:house][:name])
+      # TODO: Don't just sliently ignore the name update
+      params[:house][:name] = @house.name
+    end
 
     @house.update(house_params)
 
