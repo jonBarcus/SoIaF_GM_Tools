@@ -18,7 +18,7 @@ You need to set up your character!
   <p>XP Available:  <%= @experience %></p>
   <% end %>
 <h3>Character Abilities</h3>
-<p><% @character.abilities.each do |ability| %>
+<p><% @character.abilities.sort.each do |ability| %>
     <li><%= ability.ability_name.name %> <%= ability.rank %></li>
     <% end %>
 </p>
