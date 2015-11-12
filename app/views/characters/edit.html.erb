@@ -15,7 +15,7 @@
   <ul>
     <%= f.fields_for :abilities do |abil| %>
     <li>
-      <%= abil.label(:rank_id) %>
+      <%= abil.label(:ability_name_id, abil.object.ability_name.name) %>
       <%= abil.hidden_field(:id) %>
       <%= abil.number_field(:rank) %>
     </li>
