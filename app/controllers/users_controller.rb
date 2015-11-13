@@ -9,7 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      House.create({region_id: 9, name: HouseMaintenance.DefaultHouseName(),
+      House.create({region_id: HouseMaintenance.DefaultHouseRegionId(),
+                    name: HouseMaintenance.DefaultHouseName(),
                     history: "This house was created for you upon account creation.",
                     user_id: @user.id})
       redirect_to("/")
