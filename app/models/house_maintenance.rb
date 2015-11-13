@@ -5,6 +5,11 @@ module HouseMaintenance
     return DEFAULT_HOUSE_NAME
   end
 
+  DEFAULT_REGION_NAME = "The Seven Kingdoms"
+  def self.DefaultHouseRegionId
+    return Region.find_by({name: DEFAULT_REGION_NAME}).id;
+  end
+
   # Checks if the given house is the default house
   #
   # params:
