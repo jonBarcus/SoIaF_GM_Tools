@@ -1,0 +1,509 @@
+abilities:
+- name: Agility
+  description: >
+    Agility measures dexterity, nimbleness, reflexes, and flexibility. In some ways, it describes how comfortable you are in your body, how well you master your movement, and how well you react to your surroundings. A low Agility suggests stiffness, uncertainty, and uncommon tension. A high Agility reflects suppleness and grace, uncanny speed, and easy physical movements.
+  specialties:
+  - action_type: LESSER
+    description: >
+      You may use Agility to perform flips, tumbles, somersaults, to leap to your feet when lying on the ground, and a variety of other acrobatic maneuvers.
+    name: Acrobatics
+    test_types: [BASIC]
+  - action_type: FREE
+    description: >
+      Agility also helps you keep yuur balance when moving across a precarious surface, allowing you to move forward or backward on a narrow ledge. The only time you need to test Agility to maintain your balance is when failure to do so would have consequences (a fall that could result in death or when you would move more quickly across treacherous terrain). A failure means you make no progress, while a Critical failure means you fall.
+    name: Balance
+    test_types: [BASIC]
+  - action_type: GREATER
+    description: >
+      You may test Agility to slip through a tight space. The Difficulty depends on the size of the space through which you're moving, as shown on the following chart. A successful test allows you to move through the gap with no trouble, while a failure results in no progress. A Critical failure indicates you become stuck and must succeed on another Agility test against the same Difficulty to escape.
+      
+      In addition,you can also use Contortions to slip free from rope bindings and manacles. The Difficulty depends on the quality of the bindings, usually FORMIDABLE (12) for ropes and HARD (15) for manacles.On a failed test, you make no progress. If you fail by more than one degree, you gain an injury (see CHAPTER 9: COMBAT for details on injuries). When attacked by an Entangling Weapon, you can use contortions to slip free as well, substituting an Agility test for an Athletics test.
+    name: Contortions
+    test_types: [BASIC]
+  - action_type: GREATER
+    description: >
+      During combat, you may use a Greater Action to Dodge all attacks made against you. The result of your Agility test replaces your Combat Defense until the start of your next turn, even if it's worse than your Combat Defense.
+    name: Dodge
+    test_types: [BASIC]
+  - action_type: FREE
+    description: >
+      During combat, you test Agility to determine the order of initiative (bonus dice from Quickness apply). The combatant with the highest result goes First, followed by the next highest, and so on. In the case of a tie, the character with the highest rank in Agility goes First. If there's still a tie, compare ranks in Quickness. Finally, should the combatants still be equal, they test again until there's a clear victor. Quickness also comes into play whenever you would test your reflexes or reactions, such as catching a thrown object for example.
+    name: Quickness
+    test_types: [BASIC]
+- name: Animal Handling
+  description: >
+    Expertise in handling animals is a valuable talent, one that finds the best trained employed by noble houses great and small. The reason is simple: humanity relies on beasts to survive. A trained dog is more than just a companion; it's a servant, a fellow warrior, and even a savior. Thus, from kennelmasters to horse trainers, those trained in Animal Handling are among some of the most valued folk in the Seven Kingdoms.
+    
+    Animal Handling addresses the various skills and techniques used to train, work, and care for animals. Whenever you would regain control over a panicked mount, train a dog to serve as a guardian, or train ravens to carry messages, you test this ability. Animal Handling is also used to control dray animals, guiding them in their work as they pull ploughs or wagons. In short, this ability serves for just about any interaction between man and beast. 
+  specialties:
+  - action_type: 1 MINUTE
+    description:  >
+      Those who spend a lot of time around animals become more comfortable with them. Such individuals become so comfortable that they can remain calm and bear their vast experience when encountering wild and feral creatures. Upon First meeting a wild animal, you may test Animal Handling to calm the beast. The Difficulty is equal to the animal's passive Will result. If you succeed, you improve the animal's disposition by one step per degree of success (see CHAPTER 8: INTRIGUE for details on dispositions). Generally, wild animals have the Unfriendly disposition to humans, while domesticated animals are Neutral. An animal's disposition must be at least Neutral for you to handle it. (Using Animal Handling to ride an unfamiliar steed is an exception.) Once you test Animal Handling, you may try again, provided the animal stays around long enough for another try.
+    name: Charm
+    test_types: [CONFLICT]
+  - action_type: ACTION
+    description: >
+      Whenever you would control an animal-drawn vehicle such as a cart, wagon, or coach, you may test Animal Handling. Provided the animal is comfortable, not injured, and not frightened, the test is AUTOMATIC (O). However, if the animal becomes panicked or injured in combat, you must succeed on an Animal Handling test to restore your control. The Difficulty is equal to the animals passive Will result. If you succeed, you may direct the animal as normal. If you fail, the animal sprints away from the source of its fear or injury. You may try again on following rounds.
+    name: Drive
+    test_types: [BASIC, CONFLICT]
+  - action_type: LESSER
+    description: >
+      Riding an animal trained to bear a rider requires an AUTOMATIC (O) Animal Handling test. When you try to ride an animal that's not inclined to be ridden (Dislike or worse disposition), you must succeed on an Animal Handling test. The Difficulty equals the animal's passive Will result. A success indicates you gain control for a number of rounds equal to your Animal Handling rank times your degree of success Three consecutive successful tests mean you gain mastery over the animal, and it will bear you. A failed test means the animal doesn't move for the round. A Critical failure means the animal throws you off. You land 1d6/2 yards away and take 1 damage (ignoring AR) for each yard you traveled.
+      
+      When riding an animal in combat, you must spend a Lesser Action to maintain control over the animal if the animal is trained for war or a Greater Action if it is not trained for war. If the animal is injured or frightened, you must test to control it as a Greater Action. The Difficulty is equal to the animal's passive Will result. If you succeed, you calm the animal down enough to resume normal actions. If you fail, the animal sprints away from the source of its injury or fear. If you roll a Critical failure, you land 1d6/2 yards away and take 1 damage (ignoring AR) for each yard you traveled.
+      
+      Alternatively, you can use the Charm function to improve the animal's disposition toward you as you would whenever you encounter an unfriendly animal.
+    name: Ride
+    test_types: [BASIC, CONFLICT]
+  - action_type: SPECIAL
+    description: >
+      You can use Animal Handling to teach animals to perform tasks, ranging from simple tricks to complex tasks, such as war training. Animal instruction is an Extended Action. You must succeed on a number of tests equal to the animal's Will minus its Cunning (minimum one test), with each test made once per week of training, assuming you spend a few hours every day with the animal. The test Difficulty is based on the animal's Will as shown on the following chart.
+      
+      Typical tricks and tasks include fetching, guarding, attacking, working, bearing a rider, and so on, within reason. Training an animal for War is a bit more involved and requires an extra week to instill the proper discipline.
+    name: Train
+    test_types: [BASIC (EXTENDED)]
+- name: Athletics
+  description: >
+    Athletics describes the degree of training, the application of physical fitness, coordination, training, and raw muscle. Athletics is an important ability in that it determines how far you can jump, how fast you run, how quickly you move, and how strong you are. Your Athletics rank alone describes many elements of your characters, but you can test Athletics to push yourself beyond normal limits.
+  specialties:
+  - action_type: LESSER
+    description: >
+      Whenever you would ascend or descend a surface, you test Athletics. A successful test allows you to climb 1 yard up or down per degree of success, up to your normal Movement. The Difficulty of the test depends on the quality of the surface. A failed test indicates you make no progress, while more than one degree of failure means you lose your hold and fall from the height you've attained.
+    name: Climb
+    test_types: [BASIC]
+  - action_type: LESSER
+    description: >
+      You test Athletics whenever you would leap up or over an obstacle such as a fence or pit.The Difficulty depends on the type of jump attempted. There are three basic jumps - running jumps, standing jumps, and high jumps. To make a running jump, you must move at least 3 yards; otherwise, it is a standing jump. Should you need to know, when performing a standing or running jump, your vertical height is equal to half the distance jumped.
+    name: Jump
+    test_types: [BASIC]
+  - action_type: GREATER
+    description: >
+      Most times, you don't need to test Athletics to Run. You simply move at your sprint speed. However, two uses require tests. Whenever you would cover any great distance, you must succeed on a CHALLENGING (9) Athletics test. If you succeed on the test, you may Run for an hour per degree. At the end of this time, you must test again, but the Difficulty increases by one step to FORMIDABLE(12). If at any time you fail, you gain one point of Fatigue (see page 175). If you're not using the fatigue rules, a failed test simply means you must stop and cannot Run again until you rest for four hours. The other major use of Run is to increase your speed. In combat, whenever you take the Sprint action, you can attempt a FORMIDABLE (12) Athletics test to run faster and, thus, cover more ground. A success allows you to sprint 1 extra yard per degree.
+    name: Run
+    test_types: [BASIC]
+  - action_type: GREATER
+    description: >
+      You use Athletics to lift or push through heavy objects. Anytime you would lift something the Narrator deems heavy, test Athletics. For benchmark difficulties, see the following chart. Note that these are starting points for lifting the weight once. The Narrator may modify the Difficulty based on an object's size and Bulk. It also gets harder to lift the same Weight repeatedly and, thus, the Difficulty increases as well.
+    name: Strength
+    test_types: [BASIC]
+  - action_type: GREATER
+    description: >
+      You can only swim if you have at least a 1B in Swim. Without it, you can keep your head above water, provided the conditions are ideal - calm waters, no or light wind, relatively shallow water, and so on. Otherwise, you sink and possibly drown.
+      
+      If you have the Swim specialty, you need not make Athletics tests unless you are in severe conditions, such as trying to ford a swollen river or keep your head above Water in a storm-tossed sea. The test Difficulty depends on the conditions of the water, factoring in such things as depth, undertow, current, wind, and so on. The Narrator sets the Difficulty based on all of these issues but can use the following as benchmarks.
+      
+      A successful test allows you to move at half your Movement plus 1 more yard for each degree of success after the first. A failed Athletics test indicates no progress. A second failed test means you slip beneath the water's surface. On the next round, you must pass another Athletics test to break the surface. Each round spent under the surface requires another successful test to get back to the air. So if you fail three consecutive tests, you need three consecutive successful tests to get back to the surface.
+    name: Swim
+    test_types: [BASIC]
+  - action_type: LESSER
+    description: >
+      You may also test Athletics to hurl objects. For items made for throwing, such as some axes, spears, knives, and the like, use Marksmanship instead. For all other items, use Athletics. The Difficulty and distance thrown depends on the object's weight and the degree of success. A failed test means the object lands 1d6 yards away in the intended direction, while more than one degree of failure means the object lands at your feet.
+    name: Throw
+    test_types: [BASIC]
+- name: Awareness
+  description: >
+    Awareness measures your senses, how quickly you can respond to changes in your environment, and your ability to see through doubletalk and feints to arrive at the truth of the matter. Whenever you would perceive your surroundings or assess another person, use Awareness.
+  specialties:
+  - action_type: FREE
+    description: >
+      You may use Awareness to look into the hearts of others and perceive the truthfulness of what they say and whether or not they seem genuine.
+      
+      Make an Awareness test against your targets passive Deception result, with a success revealing the target's general disposition toward you or the topic of your conversation. Attaining additional degrees reveal a greater sense about the targets motivations, attitudes and so on. This use of Awareness doesn't provide mind-reading; it merely lets you get an instinctual hunch about a targets motives based on his manner, expressions, and the tone of his voice.
+    name: Empathy
+    test_types: [CONFLICT]
+  - action_type: FREE
+    description: >
+      Awareness is most often used to employ your senses, to perceive the world around you and see the small details. Unless you're actively searching or looking around, you don't test Awareness. Instead, anyone who tries to hide from you or conceal something from you must beat your passive Awareness result. On a failed test, you become aware of the effort to hide automatically.
+      
+      If, however, you are actively searching for something or someone, you must equal or beat the opponent's Stealth test or the Difficulty set by the Narrator to find the hidden item. Most Awareness test difficulties made to locate hidden objects, levers, and doors are FORMIDABLE (12), though well-hidden objects may be harder to find.
+    name: Notice
+    test_types: [NONE, CONFLICT]
+- name: Cunning
+  description: >
+    Cunning encapsulates cleverness, intellect, and the application of all your collected knowledge. Typically, Cunning comes into play whenever you might recall an important detail or instruction, work through a puzzle, or solve some other problem, such as when researching and deciphering codes. While it's an important ability to those who hold power, even those who ?ght on the battle?eld can take advantage of being smarter than their enemies.
+  specialties:
+  - action_type: GREATER
+    description: >
+      Whenever you examine a text written in another language or in code, you may test your Cunning to discern the intent of the message and derive some basic understanding of its contents. Each degree of success allows you to Decipher about a paragraph of information
+    name: Decipher
+    test_types: [BASIC (EXTENDED)]
+  - action_type: GREATER
+    description: >
+      You may test Cunning to solve riddles, puzzles, and other problems of logic. You might use Logic to figure out an enemy's plan from a series of unrelated movements, or you might use it to assess the currents of a noble's court to identify conspiracies and the web of alliances.The test's Difficulty depends on the complexity and size of the problem you wish to solve. Generally, most riddles are FORMIDABLE (12).
+      
+      You may also pit your Cunning test against the passive Warfare result of an enemy commander - provided you have a good look at your opponent's plans - to find a flaw. At the Narrator's discretion, a successful test may allow you to add some or all of your Logic bonus dice to your Warfare test when the battle is joined.
+    name: Logic
+    test_types: [BASIC]
+  - action_type: FREE
+    description: >
+      You can test cunning to recall a piece of useful information that relates to a challenge you currently face. The Difficulty depends on the nature of the problem and is set by the Narrator. A successful test might grant you a hint about how to circumvent the challenge or could provide a useful bonus on a test against an opponent. For example, when engaged in an intrigue with another noble, you might test Cunning to recall something useful about the family in question. If you succeed, and if there is something in your opponent's past that you could know and would help, you could gain a bonus die or even an extra die on your test.
+    name: Memory
+    test_types: [BASIC]
+- name: Deception
+  description: >
+    Deception measures your gift at duplicity, your ability to lie and deceive. You use Deception to mask your intentions and hide your agenda. You also use Deception to pretend to be someone other than who you really are, to affect a different accent, and pull off a disguise. While Deception has negative connotations, it is a useful ability for those who play the game of thrones.
+  specialties:
+  - action_type: LESSER
+    description: >
+      Whenever you would pretend to be someone other than who you really are - in a stage performance or when impersonating someone else - you test Deception. Acting requires a conflict test in which you test Deception against your opponent's passive Awareness result, If your opponent has cause to suspect your duplicity, the Difficulty is equal your opponent's Awareness test result. Under certain circumstances, you may be entitled to add your Disguise bonus dice to acting Deception tests provided the costume is integral to your performance.
+    name: Act
+    test_types: [CONFLICT]
+  - action_type: LESSER
+    description: >
+      Deception is also a useful tool in intrigues. You may test Deception whenever you would test Persuasion to compel another target but only if your role in the intrigue involves concealing information, misleading your opponent, or blatantly lying about your intentions. As well, when a target attempts to discern your motives, your opponent's Difficulty is equal to your Deception test result.
+    name: Bluff
+    test_types: [CONFLICT]
+  - action_type: FREE
+    description: >
+      Whenever you are engaged in a game of chance or similar situation, you can fudge the results to give yourself an advantage. Roll a Deception test against your opponent's base Awareness result (or your opponent's Awareness result if he has reason to believe you are cheating). If you succeed, you may add (Deception rank X degree) to the test result involved in the game (usually Cunning).
+    name: Cheat
+    test_types: [BASIC]
+  - action_type: LESSER
+    description: >
+      Similar to Act, using Deception to Disguise means you are concealing your identity, but you are not actively trying to be someone else. Disguise allows you to conceal your identity in plain view, such as wearing a hooded cloak and garb suited to smallfolk to hide the fact that you are actually an infamous knight. Disguise requires a conflict test in which you test Deception against your opponent's passive Awareness result. If your opponent has cause to suspect your duplicity, the Difficulty is equal to your opponents Awareness test result. Under certain circumstances, you may be entitled to add your Act bonus dice to Deception tests, provided a performance is integral to your disguise.
+    name: Disguise
+    test_types: [CONFLICT]
+- name: Endurance
+  description: >
+    Endurance measures your physical well-being, health, and hardiness. Your Endurance determines how much punishment you can take, as well as how quickly you recover from injuries. As well, whenever you are exposed to a hazard such as poison, smoke, and similar effects, you test Endurance to stave off the effects.
+  specialties:
+  - action_type: FREE
+    description: >
+      Any time you are exposed to a hazard (poison, disease, and similar), you may roll an Endurance test to resist the effects of the hazard. Most hazards require multiple successful tests to overcome them fully, and a failed test could impose an injury, wound, or even kill you outright. Each hazard includes difficulty, virulence, and frequency. Difficulty describes the complexity of the Endurance test. Virulence describes the number of successful tests required to overcome the hazard, and frequency describes the time between Endurance tests. Generally, each additional degree of success on a test counts as an additional success. For details, see Hazards on page 210 in CHAPTER 11:THE NARRATOR.
+    name: Resilience
+    test_types: [BASIC (EXTENDED)]
+  - action_type: SPECIAL
+    description: >
+      Whenever you gain injuries or wounds, you may test Endurance to overcome them. You must wait at least one day before testing to remove injuries and at least one week to remove wounds. The test Difficulty depends on your activity level during the time between when you took the injury and when you test Endurance to remove the injury.
+      
+      A successful test removes 1 injury per degree or 1 wound per two degrees. A failed test means you make no progress, but Critical failure means your injuries fester, and you gain either another injury or another wound, depending on which you are trying to overcome.
+    name: Stamina
+    test_types: [BASIC]
+- name: Fighting
+  description: >
+    Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+  specialties:
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Axes
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Bludgeons
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Brawling
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Fencing
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Long Blades
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Pole-Arms
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Shields
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Short Blades
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Fighting describes your skill at arms, your ability to wield weapons effectively in combat. Whenever you would attack unarmed or use a hand-held weapon, you test Fighting.
+    name: Spears
+    test_types: [CONFLICT]
+- name: Healing
+  description: >
+    Life in the Seven Kingdoms is perilous, and those who venture beyond the relative safety of their walls are at risk of attack from bandits and mountain men, wildlings, rogue knights, and even from some predatory animals. With such encounters come injuries, and while many may recover on their own, injuries left untended may fester, and death can result even from a minor cut.
+    
+    Healing, then, represents a skill with and understanding of the accumulated medical knowledge throughout the world. Rank in this ability reflects an understanding of health and recovery, with the highest ranks representing talents held only by the greatest of maesters. 
+  specialties:
+  - action_type: GREATER
+    description: >
+      You may examine a sick or injured patient to see what is wrong with them or try to determine what is wrong with a patient by hearing a description of the symptoms they are suffering from. A typical test is FORMIDABLE (12) when the patient is present, though the Difficulty can drop as far as AUTOMATIC (0) if the cause of the injury is readily apparent-it's hard to miss a spear stuck in the belly. When diagnosing an absent patient, the Difficulty increases by 5. A successful test means you understand the general problem, while a failed test means you must guess. Each additional degree on the test grants +1D on the Healing test to treat the patient, up to the number of bonus dice you have invested in this specialty.
+    name: Diagnose
+    test_types: [BASIC]
+  - action_type: 1 MINUTE
+    description: >
+      You can roll a Healing test to treat a patient suffering from sickness, poison, or some other hazardous effect. You substitute the result of your Healing test for the patient's Endurance test to resist the hazard's effect. You must use your result, even if it is worse than what the patient could achieve on his own, and you must test Healing before the patient tests Endurance.
+    name: Treat Ailment
+    test_types: [BASIC]
+  - action_type: VARIES
+    description: >
+      Healing is also used to treat the injured and speed along the natural recovery process. To treat a patient in this way, you must attend to the patient, spending at least one hour every day the patient must rest (or not rest) cleaning the injury and changing bandages. At the end of this time, substitute your Healing test result for the patient's Endurance test. The patient must accept the result of your Healing test, even if it is worse than what the patient could have achieved on his own. However, a patient in your care is never at risk of further injury from a failed Healing test.
+    name: Treat Injury
+    test_types: [BASIC]
+- name: Knowledge
+  description: >
+    Knowledge describes your general understanding and awareness of the world in which you live. It represents a broad spectrum of subjects, ranging from history, agriculture, economics, politics, and numerous other subjects-but only in the broadest possible ways. For specialized forms of knowledge, you must invest Destiny Points to acquire the Knowledge Focus benefit.
+  specialties:
+  - action_type: FREE
+    description: >
+      You test Knowledge to recall useful information about a subject. Generally, the Education specialty is used to identify things around you, such as knowing what a shadowcat is, where the Wall lies, or who sits on the throne. The Difficulty depends on the question, specifically how widely known the sought-after information is.
+    name: Education
+    test_types: [BASIC]
+  - action_type: ONE DAY
+    description: >
+      Education isn't the only to way to find out information about the subject; if you have access to relevant texts, you can scour those tomes to locate the elusive knowledge. Researching functions much like Education, except it takes more time and requires a great deal of reading and searching. You may only Research a subject if you have access to a library that holds the information you're seeking.
+      
+      The test's Difficulty depends on the obscurity of the subject and uses the same difficulties described under Education.
+      
+      The number of successes needed to find the information depends on the library's size. Larger libraries are more likely to hold the information you seek, but sifting through the often-disorganized mess takes far more time. In addition, with larger collections come more opportunities to become lost, misled, or follow the wrong line of research.
+    name: Research
+    test_types: [BASIC (EXTENDED)]
+  - action_type: VARIES
+    description: >
+      You can use Knowledge to acquire useful information by listening for rumors, talking with the average person, and spending time in some of the seedier places in a community. By gathering information in this way, you can learn a great deal about current events, attitudes, and the atmosphere of the community. The Difficulty depends on how much time you spend haunting an area. A successful test only reveals rumors and speculation, but usually, one can learn a great deal about what's going on from such information. You gain one bit of useful information per degree of success.
+    name: Streetwise
+    test_types: [BASIC]
+- name: Language
+  description: >
+    Language is the ability to communicate in a tongue, usually through speech, but among the best educated, also through the written word. The starting rank in this ability applies to your knowledge of the Common Tongue spoken throughout Westeros. You start with rank 0 in all other languages. When you improve this ability, you may improve your ability with the Common Tongue or select another language.
+    
+    Language has no special uses. It simply confers the ability to communicate in a particular tongue. The rank you give a language determines your eloquence when using the language and determines if you are literate in the language or not.
+- name: Marksmanship
+  description: >
+    Marksmanship represents your skill with ranged weapons-most notably bows and crossbows, but also slings, thrown weapons, and even larger siege weapons. It is the ability to use them appropriately and accurately in combat. Whenever you make an attack using a ranged weapon, you test Marksmanship, likewise when you are target shooting or simply showing off your skill.
+  specialties:
+  - action_type: LESSER OR GREATER
+    description: >
+      Whenever you Attack in combat, you test Marksmanship against your opponent's Combat Defense. A successful test deals weapon damage times your degree of success. Weapon damage is equal to the weapon plus the weapon's key ability. CHAPTER 9: COMBAT goes into extensive detail on attacks and the consequences of a successful attack.
+    name: Bows
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Whenever you Attack in combat, you test Marksmanship against your opponent's Combat Defense. A successful test deals weapon damage times your degree of success. Weapon damage is equal to the weapon plus the weapon's key ability. CHAPTER 9: COMBAT goes into extensive detail on attacks and the consequences of a successful attack.
+    name: Crossbows
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Whenever you Attack in combat, you test Marksmanship against your opponent's Combat Defense. A successful test deals weapon damage times your degree of success. Weapon damage is equal to the weapon plus the weapon's key ability. CHAPTER 9: COMBAT goes into extensive detail on attacks and the consequences of a successful attack.
+    name: Siege
+    test_types: [CONFLICT]
+  - action_type: LESSER OR GREATER
+    description: >
+      Whenever you Attack in combat, you test Marksmanship against your opponent's Combat Defense. A successful test deals weapon damage times your degree of success. Weapon damage is equal to the weapon plus the weapon's key ability. CHAPTER 9: COMBAT goes into extensive detail on attacks and the consequences of a successful attack.
+    name: Thrown
+    test_types: [CONFLICT]
+- name: Persuasion
+  description: >
+    Persuasion is the ability to manipulate the emotions and beliefs of others. With this ability, you can modify how others see you, shape their attitudes towards others, convince them of things they might not otherwise agree to, and more. While a potent ability-and one vital to those who play the game of thrones-limits do exist, and those who have no interest in intrigue or conversation can't be forced to endure your efforts of manipulation. But for those who want something from you or who are amenable to you, Persuasion can be a powerful tool.
+    
+    One of several important abilities you will use when engaged in an intrigue, Persuasion has many different expressions, each differentiated by the techniques you employ and what it is you are after. Bargain reflects exchanging a service or good for something of equal value, while Charm serves to cultivate friendships and alliances. Taunt can compel targets to action to escape condemnation, while Incite works to diminish a target's opinion of someone else.
+  specialties:
+  - action_type: ''
+    description: >
+      Persuasion is the ability to manipulate the emotions and beliefs of others. With this ability, you can modify how others see you, shape their attitudes towards others, convince them of things they might not otherwise agree to, and more. While a potent ability-and one vital to those who play the game of thrones-limits do exist, and those who have no interest in intrigue or conversation can't be forced to endure your efforts of manipulation. But for those who want something from you or who are amenable to you, Persuasion can be a powerful tool.
+      
+      One of several important abilities you will use when engaged in an intrigue, Persuasion has many different expressions, each differentiated by the techniques you employ and what it is you are after. Bargain reflects exchanging a service or good for something of equal value, while Charm serves to cultivate friendships and alliances. Taunt can compel targets to action to escape condemnation, while Incite works to diminish a target's opinion of someone else. All the various methods and full uses of the Persuasion ability can be found in CHAPTER 8: INTRIGUE.
+    name: Bargain
+    test_types: []
+  - action_type: ''
+    description:  >
+      Persuasion is the ability to manipulate the emotions and beliefs of others. With this ability, you can modify how others see you, shape their attitudes towards others, convince them of things they might not otherwise agree to, and more. While a potent ability-and one vital to those who play the game of thrones-limits do exist, and those who have no interest in intrigue or conversation can't be forced to endure your efforts of manipulation. But for those who want something from you or who are amenable to you, Persuasion can be a powerful tool.
+      
+      One of several important abilities you will use when engaged in an intrigue, Persuasion has many different expressions, each differentiated by the techniques you employ and what it is you are after. Bargain reflects exchanging a service or good for something of equal value, while Charm serves to cultivate friendships and alliances. Taunt can compel targets to action to escape condemnation, while Incite works to diminish a target's opinion of someone else. All the various methods and full uses of the Persuasion ability can be found in CHAPTER 8: INTRIGUE.
+    name: Charm
+    test_types: []
+  - action_type: ''
+    description:  >
+      Persuasion is the ability to manipulate the emotions and beliefs of others. With this ability, you can modify how others see you, shape their attitudes towards others, convince them of things they might not otherwise agree to, and more. While a potent ability-and one vital to those who play the game of thrones-limits do exist, and those who have no interest in intrigue or conversation can't be forced to endure your efforts of manipulation. But for those who want something from you or who are amenable to you, Persuasion can be a powerful tool.
+      
+      One of several important abilities you will use when engaged in an intrigue, Persuasion has many different expressions, each differentiated by the techniques you employ and what it is you are after. Bargain reflects exchanging a service or good for something of equal value, while Charm serves to cultivate friendships and alliances. Taunt can compel targets to action to escape condemnation, while Incite works to diminish a target's opinion of someone else. All the various methods and full uses of the Persuasion ability can be found in CHAPTER 8: INTRIGUE.
+    name: Convince
+    test_types: []
+  - action_type: ''
+    description:  >
+      Persuasion is the ability to manipulate the emotions and beliefs of others. With this ability, you can modify how others see you, shape their attitudes towards others, convince them of things they might not otherwise agree to, and more. While a potent ability-and one vital to those who play the game of thrones-limits do exist, and those who have no interest in intrigue or conversation can't be forced to endure your efforts of manipulation. But for those who want something from you or who are amenable to you, Persuasion can be a powerful tool.
+      
+      One of several important abilities you will use when engaged in an intrigue, Persuasion has many different expressions, each differentiated by the techniques you employ and what it is you are after. Bargain reflects exchanging a service or good for something of equal value, while Charm serves to cultivate friendships and alliances. Taunt can compel targets to action to escape condemnation, while Incite works to diminish a target's opinion of someone else. All the various methods and full uses of the Persuasion ability can be found in CHAPTER 8: INTRIGUE.
+    name: Incite
+    test_types: []
+  - action_type: ''
+    description:  >
+      Persuasion is the ability to manipulate the emotions and beliefs of others. With this ability, you can modify how others see you, shape their attitudes towards others, convince them of things they might not otherwise agree to, and more. While a potent ability-and one vital to those who play the game of thrones-limits do exist, and those who have no interest in intrigue or conversation can't be forced to endure your efforts of manipulation. But for those who want something from you or who are amenable to you, Persuasion can be a powerful tool.
+      
+      One of several important abilities you will use when engaged in an intrigue, Persuasion has many different expressions, each differentiated by the techniques you employ and what it is you are after. Bargain reflects exchanging a service or good for something of equal value, while Charm serves to cultivate friendships and alliances. Taunt can compel targets to action to escape condemnation, while Incite works to diminish a target's opinion of someone else. All the various methods and full uses of the Persuasion ability can be found in CHAPTER 8: INTRIGUE.
+    name: intimidate
+    test_types: []
+  - action_type: ''
+    description:  >
+      Persuasion is the ability to manipulate the emotions and beliefs of others. With this ability, you can modify how others see you, shape their attitudes towards others, convince them of things they might not otherwise agree to, and more. While a potent ability-and one vital to those who play the game of thrones-limits do exist, and those who have no interest in intrigue or conversation can't be forced to endure your efforts of manipulation. But for those who want something from you or who are amenable to you, Persuasion can be a powerful tool.
+      
+      One of several important abilities you will use when engaged in an intrigue, Persuasion has many different expressions, each differentiated by the techniques you employ and what it is you are after. Bargain reflects exchanging a service or good for something of equal value, while Charm serves to cultivate friendships and alliances. Taunt can compel targets to action to escape condemnation, while Incite works to diminish a target's opinion of someone else. All the various methods and full uses of the Persuasion ability can be found in CHAPTER 8: INTRIGUE.
+    name: Seduce
+    test_types: []
+  - action_type: ''
+    description:  >
+      Persuasion is the ability to manipulate the emotions and beliefs of others. With this ability, you can modify how others see you, shape their attitudes towards others, convince them of things they might not otherwise agree to, and more. While a potent ability-and one vital to those who play the game of thrones-limits do exist, and those who have no interest in intrigue or conversation can't be forced to endure your efforts of manipulation. But for those who want something from you or who are amenable to you, Persuasion can be a powerful tool.
+      
+      One of several important abilities you will use when engaged in an intrigue, Persuasion has many different expressions, each differentiated by the techniques you employ and what it is you are after. Bargain reflects exchanging a service or good for something of equal value, while Charm serves to cultivate friendships and alliances. Taunt can compel targets to action to escape condemnation, while Incite works to diminish a target's opinion of someone else. All the various methods and full uses of the Persuasion ability can be found in CHAPTER 8: INTRIGUE.
+    name: Taunt
+    test_types: []
+- name: Status
+  description: >
+    Of all of the abilities, Status is one of the more unusual in that it isn't determined through normal means during character creation. Instead, your position inside your noble house determines your Status. In a way, it is as much a part of you as Athletics, Endurance, and Persuasion are, for you have little control over where and to whom you were born. If by a stroke of poor luck you were born to a family of smallfolk leech farmers, odds are that you'll never be able to raise yourself to a higher Status. Similarly, if born to a great house, your family may be scattered and destroyed and you exiled; your condition and circumstances can never change who you are in the eyes of your peers-even though shame and disgrace can significantly affect how well you can exert your Status.
+    
+    Functionally, Status describes the circumstances of your birth and the knowledge and influence those circumstances grant you. The higher your rank, the more likely you will be able to recognize heraldry, the better your reputation, and the stronger your knowledge of managing people and lands.
+  specialties:
+  - action_type: FREE
+    description: >
+      Breeding represents your knowledge of customs and procedures, the forms of etiquette and the expected behavior when interacting with others of a similar or higher station. Whenever you engage in an intrigue with a character who has Status 4 or higher-and you are aware of the target's Status-you may test Status as a Free Action against the target's Intrigue Defense. A success grants +1B, and every two degrees thereafter grants you another +1B. These dice represent a fixed pool, which you may add to Persuasion tests in any amount throughout the intrigue. Once you spend the bonus die, it is gone. Any bonus dice remaining at the end of the intrigue are lost.
+    name: Breeding
+    test_types: [BASIC]
+  - action_type: FREE
+    description: >
+      During an intrigue, you test Status to determine the order of initiative. The highest result goes first; ties are broken by bonus dice in Reputation and then Status; have players re-roll if there is still a tie. You may also test Status whenever you would perform the Shield of Reputation action in an intrigue.
+      
+      Another use for Reputation is to allow maneuvering in social situations, and garner more attention than your status would otherwise warrant. Typically, you must succeed on a CHALLENGING (9) Status test to gain the notice of someone to whom you'd like to speak, but if you're jockeying for position, you might have to make a competition test against your rival.
+    name: Reputation
+    test_types: [BASIC, COMPETITION]
+  - action_type: VARIES
+    description: >
+      Status is also a vital ability for managing one's holdings. Status tests rolled for Stewardship occur in response to troubles affecting your lands. You can also test Status to oversee improvements on your keep, round up conscripts, hire mercenaries, improve trade, communities, or roads. For more details on this use of Status, see CHAPTER 6: HOUSE & LANDS.
+    name: Stewardship
+    test_types: [BASIC]
+  - action_type: VARIES
+    description: >
+      Use the Tournament specialty for any Status check related to recalling useful information about such contests, to assess opponents you face, to attract notable knights to your tournament (testing against the desired knight's passive Status), and other uses at the Narrator's discretion.
+    name: Tournaments
+    test_types: [BASIC]
+- name: Stealth
+  description: >
+    Stealth represents your ability to creep about unseen and unheard when you want or need to. Whenever you would move without being noticed, you test Stealth.
+  specialties:
+  - action_type: LESSER
+    description: >
+      In a crowded area, you may use the Blend In specialty to make yourself part of the crowd. To conceal your presence, you must make a Stealth test against your opponent's passive Awareness result. However, if your opponents are actively searching for you, you must beat their Awareness tests with a Stealth test.
+      
+      In combat, if your opponent is unaware of you, you gain +1D on all Fighting and Marksmanship tests during the first round.
+    name: Blend In
+    test_types: [CONFLICT]
+  - action_type: NONE
+    description: >
+      You can also use Stealth to move unseen and unheard through the shadows. You may only test Stealth in this way if you benefit from rain, foliage, darkness, or some form of cover. A normal Stealth test requires you beat your opponent's passive Awareness result, but if your opponent is searching for you, you must beat your opponent's Awareness test result.
+      
+      As with Blend In, you gain +1D on all Fighting and Marksmanship tests against opponents that are not aware of you. %is extra die is good for the first round of combat only.
+    name: Sneak
+    test_types: [CONFLICT]
+- name: Survival
+  description: >
+    Survival is the ability to get by in the wild, to hunt, to forage, to avoid getting lost, and to follow tracks. The Survival skill is important for a variety of people in that hunting remains an important method of providing food for one's family, especially in the more remote corners of Westeros. As well, hunting and hawking are common pastimes for the nobility of the Seven Kingdoms, and lacking the ability to hunt calls into question an individual's courage and manliness.
+  specialties:
+  - action_type: VARIES
+    description: >
+      You can test Survival to gather edible food and water for yourself and your companions with the Forage specialty. You may only test this ability in areas that actually contain food. The Difficulty depends on how long you spend foraging, as well as the terrain and season. A successful test provides enough food for one person for one day per degree.
+    name: Forage
+    test_types: [BASIC]
+  - action_type: VARIES
+    description: >
+      You can also test Survival to go hunting for animals. You may only test this ability in areas that actually contain wildlife. The Difficulty depends on how long you spend hunting, as well as the terrain and season. A successful test provides enough food for one person for one day per degree.
+      
+      If you have hounds or a hunting bird (such as a hawk), you gain +1D on your Survival test.
+    name: Hunt
+    test_types: [BASIC]
+  - action_type: ONCE PER 4 HOURS
+    description: >
+      Survival is also vital for getting around in the wild without becoming lost. The base Difficulty is CHALLENGING (9) but is modified by the time of day, weather, and terrain. A successful test indicates you travel in the direction you intend for four hours multiplied by your degree of success without having to test Survival. A failed test means you drift one step right or left. So if you are traveling north, a failed test might indicate you travel northeast for four hours. A Critical failure means you become turned around and actually head in the opposite direction. If at any time the terrain, time, or weather changes, and you are lost, you are entitled to a new Survival test. Modifiers are cumulative.
+    name: Orientation
+    test_types: [BASIC]
+  - action_type: ONCE PER 2 HOURS
+    description: >
+      Finally, you can test Survival to follow tracks. Before you can follow them, however, you must first find them. Locating tracks requires an Awareness test. %e base Difficulty is CHALLENGING (9) but is modified by lighting, weather, and the surface holding the tracks.
+      
+      Once you locate the tracks, you can follow them by succeeding on a Survival test against the same Difficulty used for Awareness. A successful test indicates you follow the tracks for two hours per degree without having to test Survival. A failed test means you lose two hours but don't lose the tracks. A Critical failure means you lose the tracks completely.
+      
+      If at any time the terrain, time, or weather changes, you must make a new Survival test to follow the tracks.
+      
+      You can also learn information from impressions left in the ground. Make a Survival test as if you were following the tracks. A success tells you how many different sets of tracks are present. Each additional degree of success gives you one more important aspect, such as approximate sizes, the speed they're traveling, how many animals, if they are being pursued, the age of the tracks, and so on.
+    name: Track
+    test_types: [BASIC]
+- name: Thievery
+  description: >
+    Thievery is a catchall ability for any skill or talent that involves larcenous activities. Examples include picking locks, hand tricks, and general robbery.
+  specialties:
+  - action_type: 1 MINUTE
+    description: >
+      You can test Thievery to bypass a lock. The Difficulty of the test depends on the quality of the lock; common locks are CHALLENGING (9), good locks are FORMIDABLE (12), and excellent locks are HARD (15) or harder. A successful test indicates you pick the lock. Each additional degree reduces the time by 10 seconds. A failed test means you were unable to open the lock, but you may try again. A Critical failure means the lock has defeated you, and you cannot try again until you place another bonus die in Pick Lock.
+      
+      To pick a lock, you must have the proper tools. If you do not, you take one or more penalty dice depending on the extent of your lack. Improvised tools, for example, may impose -1D, while no tools at all may impose -5D.
+    name: Pick Lock
+    test_types: [BASIC]
+  - action_type: LESSER
+    description: >
+      Sleight of Hand involves simple tricks used to entertain and misdirect a person's attention. You can substitute a Thievery test for a Cunning test whenever you distract in combat.
+      
+      You can also palm small objects (like a ring) without anyone noticing. You have to test Sleight of Hand against the target's passive Awareness result to palm the objects unnoticed.
+      
+      You also know how to play simple conjurers' tricks, such as pulling coins out of your ears. You have to succeed on a ROUTINE (6) test to play tricks with small objects, such as coins. To play tricks with bigger objects, such as knives, you have to pass CHALLENGING (9) or harder test, depending on the size of the objects.
+      
+      Finally, you can also conceal small objects on your person (daggers, poison, scrolls, and so on). Whenever you are searched, the searching character must equal or beat your Thievery test result with an Awareness test to find the item.
+      
+      At the Narrator's option, you may substitute a Sleight of Hand test for a Deception test in an intrigue based around using your legerdemain to fool or distract your target in some fashion, such as certain con games or attempts to cheat at gambling.
+    name: Sleight of Hand
+    test_types: [BASIC]
+  - action_type: LESSER
+    description: >
+      You can use Steal to rob unsuspecting people by cutting their purses or picking their pockets. Against an unaware opponent, you must succeed on a Thievery test against the target's passive Awareness result. If you succeed, you manage to get the purse away without their knowledge. However, the target is entitled to a CHALLENGING (9) Awareness test to notice the lightened load each round. Each additional degree gives you an extra round before the target begins testing Awareness to know they were had.
+    name: Steal
+    test_types: [BASIC]
+- name: Warfare
+  description: >
+    Warfare describes a character's talents at managing the battlefield, covering the ability to issue commands, strategic knowledge for maneuvering armies and tacticsfor dealing with small engagements. Warfare is used extensively in combat and warfare but may also be used outside of combat to look for areas or opportunities for strategic or tactical advantage. 
+  specialties:
+  - action_type: SPECIAL
+    description: >
+      Warfare is used during skirmishes and battles. During such encounters, a character tests Warfare (using Command bonus dice) to issue commands to his unit. For full details on this use, see CHAPTER 10: WARFARE.
+    name: Command
+    test_types: [BASIC]
+  - action_type: FREE
+    description: >
+      In skirmishes and battles, a side's leader tests Warfare (using bonus dice from Strategy) to determine the order of initiative.
+    name: Strategy
+    test_types: [BASIC]
+  - action_type: FREE
+    description: >
+      In combat, you can forgo your Agility test to determine your placement in initiative in order to test Warfare to grant bonus dice to your allies' Agility tests. The Difficulty is usually CHALLENGING (9). A successful test grants +1B per degree.
+    name: Tactics
+    test_types: [BASIC]
+- name: Will
+  description: >
+    Will is your mental fortitude, and it reflects the state of your mind's health and endurance. It represents your ability to withstand fear in the face of appalling violence or supernatural phenomena, and it serves as the foundation for your ability to resist being manipulated by others.
+  specialties:
+  - action_type: FREE
+    description: >
+      Generally, you are free to portray your character in ways appropriate to your character's personality and the situation as you decide, but there will be instances during game play when your character confronts the horrific, the impossible, and the downright terrifying. Whenever you are exposed to magic, a friend's death, overwhelming odds, a supernatural creature, or some other unnerving experience, the Narrator may test your Will.
+      
+      The difficulty depends on the situation: encountering an Other may require a CHALLENGING test, while squaring off against a famous knight may require an EASY test. If you succeed, you master your fear. If you fail, you take a -1D to all tests related to the fear. At the start of each of your turns, you can try to overcome your fear by attempting another Will (Courage) test. A second failed test results in another penalty die, usually indicating it's a good idea to run away until you get your nerve back.
+      
+      It's best to let players dictate how they respond to threats and scary situations based on their character's personality. Use Will (Courage) tests as tool to promote roleplaying or to modify circumstances as you see fit.
+    name: Courage
+    test_types: [BASIC]
+  - action_type: GREATER
+    description: >
+      You may test Will to improve an allies' ability to assist in a task. Usually, when an ally assists, the ally grants a bonus equal to half his rank in the tested ability. When you coordinate efforts, you can add your Will rank times your degree of success to the result as well. The Difficulty is CHALLENGING (9) for non-combat tests and FORMIDABLE (12) for combat tests.
+      
+      Timing is everything when you using Coordinate. To use this function of Will, you must take your turn after the assisting character but before the character who is testing his ability.
+    name: Coordinate
+    test_types: [BASIC]
+  - action_type: GREATER
+    description: >
+      Will can also be used to resist temptation and hold true to your ideals. During an intrigue, you may test Will using the Withdraw action to replace your Intrigue Defense with your Will test result.
+    name: Dedication
+    test_types: [BASIC]
