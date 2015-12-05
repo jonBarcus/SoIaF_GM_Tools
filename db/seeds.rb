@@ -94,7 +94,8 @@ female_gender = Gender.create({name:       "Female"})
 
 # Load the Ability and Specialty details from the YAML file
 begin
-    details = YAML.load_file("db/Ability_Specialty_table.yml")
+    filepath = File.dirname(__FILE__)
+    details = YAML.load_file(filepath + File::SEPARATOR + "Ability_Specialty_table.yml")
 
     for a in 0..details["abilities"].count()-1
         ability = details["abilities"][a]
