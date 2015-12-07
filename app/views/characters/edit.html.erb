@@ -13,7 +13,7 @@
   <%= f.text_area(:history, size: "60x12") %>
   Abilities
   <ul>
-    <%= f.fields_for :abilities do |abil| %>
+    <%= f.fields_for :abilities, @character.abilities.sort do |abil| %>
     <li>
       <%= abil.label(:ability_name_id, abil.object.ability_name.name) %>
       <%= abil.hidden_field(:id) %>
