@@ -11,17 +11,22 @@
 
 <h3>Character Experience</h3>
 <% if @new_character %>
-You need to set up your character!
-<p>Ability XP:  <%= @ability_xp %> <br>
+  You need to set up your character!<p>
+  Ability XP:  <%= @ability_xp %> <br>
   Specialty XP:  <%= @specialty_xp %> <br> </p>
-  <% else %>
+<% else %>
   <p>XP Available:  <%= @experience %></p>
-  <% end %>
+<% end %>
 <h3>Character Abilities</h3>
-<p><% @character.abilities.sort.each do |ability| %>
-    <li><%= ability.ability_name.name %> <%= ability.rank %></li>
-    <% end %>
-</p>
+<p><ul>
+<% @character.abilities.sort.each do |ability| %>
+  <li><%= ability.ability_name.name %> <%= ability.rank %></li><ul>
+  <% ability.specialties.sort.each do |specialty| %>
+    <li><%= specialty.specialty_name.name %></li>
+  <% end %>
+  </ul>
+<% end %>
+</ul></p>
 
 <a href="/characters/<%="#{@character.id}"%>/edit">Edit</a>
 <a href="/characters/">Go Back</a>

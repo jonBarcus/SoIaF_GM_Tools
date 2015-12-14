@@ -48,6 +48,7 @@ class CharactersController < ApplicationController
       @experience = @character.experience
     end
     @character_abilities = @character.abilities
+    @character_specialties = @character.specialties
   end
 
   def update
@@ -95,7 +96,8 @@ class CharactersController < ApplicationController
       :description,
       :history,
       :user_id,
-      abilities_attributes: [:id, :rank]
+      abilities_attributes: [:id, :rank],
+      specialties_attributes: [:id],
       # abilities_attributes: [:character_id, :ability_name_id, :rank]
       )
   end

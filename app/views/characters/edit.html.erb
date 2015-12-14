@@ -13,11 +13,19 @@
   <%= f.text_area(:history, size: "60x12") %>
   Abilities
   <ul>
-    <%= f.fields_for :abilities, @character.abilities.sort do |abil| %>
+    <%= f.fields_for :abilities, @character.abilities.sort do |ability_form| %>
     <li>
-      <%= abil.label(:ability_name_id, abil.object.ability_name.name) %>
-      <%= abil.hidden_field(:id) %>
-      <%= abil.number_field(:rank) %>
+      <%= ability_form.label(:ability_name_id, ability_form.object.ability_name.name) %>
+      <%= ability_form.hidden_field(:id) %>
+      <%= ability_form.number_field(:rank) %>
+      <ul>
+      <%= ability_form.fields_for :specialties, ability_form.object.specialties.sort do |specialty_form| %>
+        <li>
+          <%= specialty_form.label(:specialty_name_id, specialty_form.object.specialty_name.name) %>
+          <%= specialty_form.hidden_field(:id) %>
+        </li>
+      <% end %>
+      </ul>
     </li>
     <% end %>
   </ul>
