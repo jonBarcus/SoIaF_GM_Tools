@@ -99,15 +99,15 @@ begin
 
     for a in 0..details["abilities"].count()-1
         ability = details["abilities"][a]
-        id = AbilityName.create({name:        ability["name"],
-                                 description: ability["description"]})
+        abil_name = AbilityName.create({name:        ability["name"],
+                                       description: ability["description"]})
 
         if not ability["specialties"].nil?
             for s in 0..ability["specialties"].count()-1
                 specialty = ability["specialties"][s]
                 SpecialtyName.create({name:         specialty["name"],
                                       description:  specialty["description"],
-                                      ability_name_id: id})
+                                      ability_name_id: abil_name.id})
             end
         end
     end
